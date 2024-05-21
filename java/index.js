@@ -5,7 +5,7 @@ const nextButton = document.getElementById("flecha-adelante");
 nextButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft += slideWidth;
-  if (slidesContainer.scrollLeft == 4*slideWidth){
+  if (slidesContainer.scrollLeft == 3*slideWidth){
     slidesContainer.scrollLeft = 0;
   }
 });
