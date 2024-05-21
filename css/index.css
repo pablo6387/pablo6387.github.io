@@ -1,0 +1,175 @@
+html, body{
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.div-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.div-1 > div {
+    color: white;
+    font-family: nunito, sans-serif;;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+    font-weight: none;
+    
+}
+
+.div-2 {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+}
+
+.div-2 > div {
+    color: white;
+    font-family: nunito, sans-serif;
+    font-weight: none;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+    
+}
+
+.div-3 {
+  margin: 16px;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor {
+    width: 1366px;
+    max-width: 1400px;
+    height: 100%;    
+    display: flex;
+    overflow: scroll;
+    scrollbar-width: none;
+    
+  } 
+   
+  .girar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 64px;
+    background-color: white;
+    border: none;
+    width: 32px;
+    font-size: 48px;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+  }
+  
+  .girar:hover,
+  .girar:focus {
+    opacity: 1;
+  }
+  
+  #flecha-atras {
+    left: 0;
+    padding-left: 4px;
+    border-radius: 0 32px 32px 0;
+  }
+  
+  #flecha-adelante {
+    right: 0;
+    padding-left: 12px;
+    border-radius: 32px 0 0 32px;
+  }
+
+  #slide1 {
+    color:rgb(223, 223, 223);
+    font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+    font-size: 40px;
+    padding-left: 50%;
+    font-weight: 100;
+  }
+
+  #slide2 {
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    padding-left: 10PX;
+    font-weight: 100;
+    text-align: left;
+    padding-left: 25%;
+    padding-top: 10%;
+    line-height: 150%;
+  }
+
+  #slide3 {
+    padding-top: 5%;
+    align-items: center;
+    /* background-color: white; */
+    height: 100%;
+  }
+
+  .contenido{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+  margin-right: auto;
+  }
+
+  .contenido > div {
+    width: 50%;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 450px;
+    flex: 1 0 100%;
+  }
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}  
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: goldenrod;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+.box1{
+    flex-grow: 1;
+}
+.box2{
+    flex-grow: 2;
+}
+
+.box3{
+    flex-grow: 3;
+}
+
+.box6{
+    flex-grow: 6;
+}
+
+.body-1{
+   background-color: black;
+}
