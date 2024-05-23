@@ -3,6 +3,7 @@
 <head>
     <title>Network.SL</title>
     <link rel="stylesheet" href="css/contacto.css">
+    <script src="java/contacto.js"></script>
 </head>
 <body class="body-1">
 <div class="div-1">
@@ -58,9 +59,9 @@
 </div>
 
 <div class="div-6">
-    <form action="/action_page.php">
-        <label for="name">Nombre y Apellido</label>
-        <input type="text" id="name" name="nombre" placeholder="Tu nombre y apellido...">
+    <form onsubmit="return validar()">
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido...">
     
         <label for="mail">E-Mail</label>
         <input type="text" id="mail" name="mail" placeholder="usuario@miempresa.com">
@@ -69,7 +70,7 @@
         <input type="text" id="empresa" name="empresa" placeholder="">
 
         <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono" name="Telefono" placeholder="">
+        <input type="text" id="telefono" name="telefono" placeholder="">
     
         <label for="pais">Pais</label>
         <select id="pais" name="pais">
@@ -308,9 +309,9 @@
                 <option value="ZM">Zambia</option>
                 <option value="ZW">Zimbabue</option>
         </select>
-        <label for="subject">Mensaje</label>
-            <textarea id="subject" name="subject" placeholder="Mensaje.." style="height:200px"></textarea>
-        <input type="submit" value="Enviar">
+        <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje.." style="height:200px"></textarea>
+        <button type="submit">Enviar</button>
       </form>
 </div>
 </body>

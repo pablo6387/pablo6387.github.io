@@ -116,7 +116,7 @@ input[type=text], select, textarea {
     box-sizing: border-box;
   }
   
-  input[type=submit] {
+  button[type=submit] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -127,7 +127,7 @@ input[type=text], select, textarea {
     cursor: pointer;
   }
   
-  input[type=submit]:hover {
+  button[type=submit]:hover {
     background-color: #45a049;}
 
 
