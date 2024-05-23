@@ -16,6 +16,6 @@ function validar(){
     if (email.value == "" || email.value.length>40 || !regExpMail.test(email.value)){
         console.log ("error");
     }
- /*    console.log(nombre.value); */
+
     return false;
 }
