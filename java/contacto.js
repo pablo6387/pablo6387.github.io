@@ -17,5 +17,9 @@ function validar(){
         console.log ("error");
     }
 
+    if (mensaje.value == "" || mensaje.value.length>300){
+        console.log ("error");
+    }
+
     return false;
 }
