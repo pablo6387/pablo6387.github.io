@@ -1,0 +1,55 @@
+html, body{
+    height:100%;
+    width:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/fondo-construc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.div-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.div-1 > a{
+  font-family: nunito, sans-serif;;
+    font-size: 14px;
+}
+
+.div-2{
+  width: 100%;
+  height: 100%;
+  margin:0;
+    display: flex;
+  font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+    font-size: 70px;
+    color: #000000;
+    justify-content: center;
+    align-items: center;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}  
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: goldenrod;
+  background-color: transparent;
+  text-decoration: none;
+}

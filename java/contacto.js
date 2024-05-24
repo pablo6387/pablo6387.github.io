@@ -16,6 +16,7 @@ function validar(){
 
     if (nombre.value == "" || nombre.value.length>40 || !regExpNombre.test(nombre.value)){
         result.innerHTML += "Nombre: Es un campo obligatorio y no puede contener numeros o simbolos <br>";
+        flag=true;
     }else{
         result.innerHTML += "Nombre: ";
         result.innerHTML += nombre.value;
@@ -24,6 +25,7 @@ function validar(){
 
     if (email.value == "" || email.value.length>40 || !regExpMail.test(email.value)){
         result.innerHTML += "E-Mail: Es un campo obligatorio y debe tener un formato valido de direccion de correo<br>";
+        flag=true;
     }else{
         result.innerHTML += "E-Mail: ";
         result.innerHTML += email.value;
@@ -36,6 +38,7 @@ function validar(){
 
     if (telefono.value && (!regExpTelefono.test(telefono.value) || telefono.value.length>15)){
         result.innerHTML += "Telefono: Solo debe contener numeros<br>";
+        flag=true;
     }else{
         result.innerHTML += "Telefono: ";
         result.innerHTML += telefono.value;
@@ -48,6 +51,7 @@ function validar(){
 
     if (mensaje.value == "" || mensaje.value.length>300){
         result.innerHTML += "Mensaje: Es un campo obligatorio<br>";
+        flag=true;
     }else{
         result.innerHTML += "Mensaje: ";
         result.innerHTML += mensaje.value;
@@ -55,5 +59,9 @@ function validar(){
     }
     
     document.getElementById("div-res").appendChild(result);
-    return false;
+    
+    if (flag){
+        return false
+    }else{
+        return true;}
 }

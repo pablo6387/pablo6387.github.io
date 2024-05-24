@@ -14,12 +14,12 @@
 <div class="div-2">
     <div class="box6"><img src="img/logo.png" alt="networksl" width="250px"></div>
     <div class="box1"><a href="index.html" target="_top">Inicio</a></div>
-    <div class="box1"><a href="http://www.wikipedia.org" target="_top">Nosotros</a></div>
-    <div class="box1"><a href="http://www.wikipedia.org" target="_top">Servicios</a></div>
-    <div class="box1"><a href="http://www.wikipedia.org" target="_top">Clientes</a></div>
-    <div class="box1"><a href="http://www.wikipedia.org" target="_top">Blog</a></div>
+    <div class="box1"><a href="construccion.html" target="_top">Nosotros</a></div>
+    <div class="box1"><a href="construccion.html" target="_top">Servicios</a></div>
+    <div class="box1"><a href="construccion.html target="_top">Clientes</a></div>
+    <div class="box1"><a href="construccion.html" target="_top">Blog</a></div>
     <div class="box1"><a href="http://www.wikipedia.org" target="_top">Contactenos</a></div>
-    <div class="box1"><a href="http://www.wikipedia.org" target="_top"><img src="img/lupa.png" width="20px"></a></div>
+    <div class="box1"><a href="construccion.html" target="_top"><img src="img/lupa.png" width="20px"></a></div>
 </div>
 <div class="div-3">
     <div id="contact">
@@ -59,11 +59,13 @@
 </div>
 
 <div class="div-6">
+    <p>(*)Campos obligatorio</p>
+
     <form onsubmit="return validar()">
-        <label for="nombre">Nombre y Apellido</label>
+        <label for="nombre">Nombre y Apellido</label> <span style="color: red;"> *</span>
         <input type="text" id="nombre" name="nombre" maxlength="40" placeholder="Tu nombre y apellido...">
     
-        <label for="mail">E-Mail</label>
+        <label for="mail">E-Mail</label><span style="color: red;"> *</span>
         <input type="text" id="mail" name="mail" maxlength="40" placeholder="usuario@miempresa.com">
 
         <label for="empresa">Empresa/Negocio/Institucion</label>
@@ -309,7 +311,7 @@
                 <option value="ZM">Zambia</option>
                 <option value="ZW">Zimbabue</option>
         </select>
-        <label for="mensaje">Mensaje</label>
+        <label for="mensaje">Mensaje</label><span style="color: red;"> *</span>
             <textarea id="mensaje" name="mensaje" maxlength="300" placeholder="Mensaje.." style="height:200px"></textarea>
         <button type="submit">Enviar</button>
       </form>
