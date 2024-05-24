@@ -130,6 +130,17 @@ input[type=text], select, textarea {
   button[type=submit]:hover {
     background-color: #45a049;}
 
+    .div-7 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(53, 53, 53);
+        font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+        font-size: 12px;
+        color: White;
+        text-align: left;  
+    }
 
 a:link {
     color: white;

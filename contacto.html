@@ -67,10 +67,10 @@
         <input type="text" id="mail" name="mail" maxlength="40" placeholder="usuario@miempresa.com">
 
         <label for="empresa">Empresa/Negocio/Institucion</label>
-        <input type="text" id="empresa" name="empresa" placeholder="">
+        <input type="text" id="empresa" maxlength="40" name="empresa" placeholder="">
 
         <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono" name="telefono" placeholder="">
+        <input type="text" id="telefono" maxlength="15" name="telefono" placeholder="">
     
         <label for="pais">Pais</label>
         <select id="pais" name="pais">
@@ -310,9 +310,13 @@
                 <option value="ZW">Zimbabue</option>
         </select>
         <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje.." style="height:200px"></textarea>
+            <textarea id="mensaje" name="mensaje" maxlength="300" placeholder="Mensaje.." style="height:200px"></textarea>
         <button type="submit">Enviar</button>
       </form>
+</div>
+
+<div id="div-res" class="div-7">
+    
 </div>
 </body>
 </html>
