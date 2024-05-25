@@ -135,13 +135,13 @@ html, body{
     font-style: normal;
     line-height: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
 }
 
 .div-7 > div{
     display: flex;
-    width: 33%;   
+    width: 50%;   
 }
 
 #pie{
@@ -150,8 +150,18 @@ html, body{
     align-items: center; 
 }
 
-#pie > img{
-    padding: 10px;
+#pie > a{
+    padding: 15px;    
+}
+
+#pie > a:hover{
+    background-color: rgb(1, 1, 128);    
+}
+
+#pie-2{
+    font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+    font-size: 11px;
+    text-align: center;
 }
 
 a:link {

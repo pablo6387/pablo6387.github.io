@@ -1,6 +1,7 @@
 
 
 function validar(){
+    let result = "";
     let flag =false;
     const regExpNombre = /^[A-Z ]+$/i;
     const regExpMail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -11,7 +12,7 @@ function validar(){
     const telefono = document.getElementById('telefono');
     const pais = document.getElementById('pais');
     const mensaje = document.getElementById('mensaje');
-    const result = document.createElement("p");
+    result = document.createElement("p");
 
 
     if (nombre.value == "" || nombre.value.length>40 || !regExpNombre.test(nombre.value)){
@@ -57,11 +58,15 @@ function validar(){
         result.innerHTML += mensaje.value;
         result.innerHTML += "<br>";
     }
+    document.getElementById("div-res").innerHTML="";
     
-    document.getElementById("div-res").appendChild(result);
     
-    if (flag){
+    if (flag){        
+        document.getElementById("div-res").appendChild(result);
+        result.innerHTML += "Su mensaje no fue enviado, revise los datos mal cargados";
         return false
     }else{
+        result.innerHTML += "Su mensaje fue enviado con exito";
+        document.getElementById("div-res").appendChild(result);
         return true;}
 }
