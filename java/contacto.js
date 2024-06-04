@@ -1,4 +1,12 @@
+function limpiarErrores(event){
+    const actualInput = event.target;
+    actualInput.classList.remove('inputErroneo');
+    const actualHermano = actualInput.nextElementSibling;
 
+    if (actualHermano.nodeName == 'SPAN'){
+        actualHermano.remove();
+    }
+}
 
 function validar(){
     let result = "";
@@ -16,7 +24,16 @@ function validar(){
 
 
     if (nombre.value == "" || nombre.value.length>40 || !regExpNombre.test(nombre.value)){
-        result.innerHTML += "Nombre: Es un campo obligatorio y no puede contener numeros o simbolos <br>";
+        const spanError= document.createElement('span');
+        spanError.textContent = "Nombre: Es un campo obligatorio y no puede contener numeros o simbolos";
+        spanError.className = "classSpanError";
+
+        if (nombre.nextElementSibling.nodeName != 'SPAN'){
+            nombre.insertAdjacentElement("afterend", spanError);
+            nombre.classList.add('inputErroneo');
+        }
+
+        /* result.innerHTML += "Nombre: Es un campo obligatorio y no puede contener numeros o simbolos <br>"; */
         flag=true;
     }else{
         result.innerHTML += "Nombre: ";
@@ -25,7 +42,15 @@ function validar(){
     }
 
     if (email.value == "" || email.value.length>40 || !regExpMail.test(email.value)){
-        result.innerHTML += "E-Mail: Es un campo obligatorio y debe tener un formato valido de direccion de correo<br>";
+        const spanError= document.createElement('span');
+        spanError.textContent = "E-Mail: Es un campo obligatorio y debe tener un formato valido de direccion de correo";
+        spanError.className = "classSpanError";
+
+        if (email.nextElementSibling.nodeName != 'SPAN'){
+            email.insertAdjacentElement("afterend", spanError);
+            email.classList.add('inputErroneo');
+        }
+        /* result.innerHTML += "E-Mail: Es un campo obligatorio y debe tener un formato valido de direccion de correo<br>"; */
         flag=true;
     }else{
         result.innerHTML += "E-Mail: ";
@@ -38,7 +63,16 @@ function validar(){
     result.innerHTML += "<br>";
 
     if (telefono.value && (!regExpTelefono.test(telefono.value) || telefono.value.length>15)){
-        result.innerHTML += "Telefono: Solo debe contener numeros<br>";
+        const spanError= document.createElement('span');
+        spanError.textContent = "Telefono: Solo debe contener numeros";
+        spanError.className = "classSpanError";
+
+        if (telefono.nextElementSibling.nodeName != 'SPAN'){
+            telefono.insertAdjacentElement("afterend", spanError);
+            telefono.classList.add('inputErroneo');
+        }
+
+        /* result.innerHTML += "Telefono: Solo debe contener numeros<br>"; */
         flag=true;
     }else{
         result.innerHTML += "Telefono: ";
@@ -51,7 +85,15 @@ function validar(){
     result.innerHTML += "<br>";
 
     if (mensaje.value == "" || mensaje.value.length>300){
-        result.innerHTML += "Mensaje: Es un campo obligatorio<br>";
+        const spanError= document.createElement('span');
+        spanError.textContent = "Telefono: Solo debe contener numeros";
+        spanError.className = "classSpanError";
+
+        if (mensaje.nextElementSibling.nodeName != 'SPAN'){
+            mensaje.insertAdjacentElement("afterend", spanError);
+            mensaje.classList.add('inputErroneo');
+        }
+        /* result.innerHTML += "Mensaje: Es un campo obligatorio<br>"; */
         flag=true;
     }else{
         result.innerHTML += "Mensaje: ";
@@ -61,11 +103,7 @@ function validar(){
     document.getElementById("div-res").innerHTML="";
     
     
-    if (flag){        
-        document.getElementById("div-res").appendChild(result);
-        result.innerHTML += "Su mensaje no fue enviado, revise los datos mal cargados";
-        
-    }else{
+    if (!flag){
         result.innerHTML += "Su mensaje fue enviado con exito";
         document.getElementById("div-res").appendChild(result);
         }

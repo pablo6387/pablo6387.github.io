@@ -190,6 +190,15 @@ input[type=text], select, textarea {
         text-align: center;
     }
 
+    .classSpanError{
+        color: red;
+        font-size: 11px;
+    }
+
+    .inputErroneo{
+        background-color: rgb(255, 122, 122);
+    }
+
 a:link {
     color: white;
     background-color: transparent;
