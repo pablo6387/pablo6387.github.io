@@ -64,9 +64,11 @@ function validar(){
     if (flag){        
         document.getElementById("div-res").appendChild(result);
         result.innerHTML += "Su mensaje no fue enviado, revise los datos mal cargados";
-        return false
+        
     }else{
         result.innerHTML += "Su mensaje fue enviado con exito";
         document.getElementById("div-res").appendChild(result);
-        return true;}
+        }
+
+    return false;
 }
