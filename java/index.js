@@ -25,6 +25,5 @@ nextButton.addEventListener("click", () => {
   mostrarImagen();
 });
 
-// Mostrar la primera imagen al cargar la página
 mostrarImagen();
 
