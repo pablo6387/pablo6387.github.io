@@ -1,25 +1,30 @@
 const slidesContainer = document.getElementById("contenedor");
-const slide = document.querySelector(".slide");
 const prevButton = document.getElementById("flecha-atras");
 const nextButton = document.getElementById("flecha-adelante");
-nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
-  if (slidesContainer.scrollLeft > 4*slideWidth){
-    slidesContainer.scrollLeft = slideWidth;
-  }
-  
-});
-prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
-  if (slidesContainer.scrollLeft <= 0*slideWidth){
-    slidesContainer.scrollLeft = 4*slideWidth;
-  }
-});
 
-function posicionar(){
-  slidesContainer.scrollLeft = slide.clientWidth;
+const imagenes = ['img/fondo.jpg', 'img/fondo2.jpg', 'img/fondo3.png', 'img/fondo4.png'];
+let index = 0;
+
+function mostrarImagen() {
+  slidesContainer.innerHTML = `<img src="${imagenes[index]}" alt="imagen">`;
 }
 
+prevButton.addEventListener("click", () => {
+  index--;
+  if (index < 0) {
+    index = imagenes.length - 1;
+  }
+  mostrarImagen();
+});
+
+nextButton.addEventListener("click", () => {
+  index++;
+  if (index >= imagenes.length) {
+    index = 0;
+  }
+  mostrarImagen();
+});
+
+// Mostrar la primera imagen al cargar la página
+mostrarImagen();
 

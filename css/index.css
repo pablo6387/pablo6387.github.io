@@ -49,14 +49,20 @@ html, body{
 }
 
 .contenedor {
-    width: 1300px;
-    max-width: 1400px;
-    height: 100%;    
-    display: flex;
-    overflow: scroll;
-    scrollbar-width: none;
-    
-  }
+  width: 1300px;
+  max-width: 1400px;
+  /* height: 100%; */
+  height: 500px; 
+  display: flex;
+  overflow: scroll;
+  scrollbar-width: none;
+  
+}
+
+.contenedor > img{
+  height: 100%;
+  width: 100%;
+}
   
   .div-4{
     width: 100%;
